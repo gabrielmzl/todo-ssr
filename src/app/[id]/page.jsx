@@ -2,7 +2,7 @@ export default async function Id({ params }) {
 
   const todo = await getTodo(params.id);
   console.log(todo);
-  return todo.length >= 1 ? (
+  return todo.userId ? (
     <div className="flex min-h-screen flex-col items-center justify-between p-24">
       <span>User ID: {todo.userId}</span>
       <span>Todo ID: {todo.id}</span>
